@@ -161,36 +161,6 @@
     border: 1px solid var(--bs-primary) !important;
 }
 
-
-/*** Topbar Start ***/
-.fixed-top .container {
-    transition: 0.5s;
-}
-
-.topbar {
-    padding: 2px 10px 2px 20px;
-    background: var(--bs-primary) !important;
-}
-
-.topbar a,
-.topbar a i {
-    transition: 0.5s;
-}
-
-.topbar a:hover,
-.topbar a i:hover {
-    color: red !important;
-}
-
-
-@media (max-width: 576px) {
-    .topbar {
-        display: none;    
-    }
-}
-/*** Topbar End ***/
-
-
 /*** Navbar ***/
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Open Sans', sans-serif;
@@ -433,6 +403,7 @@
     width: 75%;
     
 }
+
 .header-carousel .header-carousel-item .carousel-caption .carousel-caption-content h1 {
     color: #fff; /* Assuming white for better contrast */
     font-size: 40px; /* Adjust font size as desired */
@@ -445,6 +416,17 @@
     font-size: 20px; /* Adjust font size as desired */
     line-height: 1.5; /* Optional: Adjust line height for spacing */
     margin-bottom: 0; /* Remove default margin for better control */
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 /*** Carousel Hero Header End ***/
 
@@ -1164,27 +1146,61 @@
 
 
 /*** Footer Start ***/
-.footer {
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/carousel-2.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.footer .footer-item a {
-    line-height: 35px;
-    color: var(--bs-body);
-    transition: 0.5s;
-}
-
-.footer .footer-item p {
-    line-height: 35px;
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    transition: .3s;
 }
 
-.footer .footer-item a:hover {
-    letter-spacing: 2px;
-    color: var(--bs-primary);
+.footer .btn.btn-social:hover {
+    color: var(--primary);
 }
 
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--primary);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .copyright a:hover {
+    color: var(--primary);
+}
 /*** Footer End ***/
 
 /*** copyright Start ***/
